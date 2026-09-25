@@ -1,29 +1,26 @@
 # Speech to Memos
 
-> Convierte notas de voz de Telegram en texto y las guarda automáticamente en una instancia self-hosted de Memos.
+> Converts Telegram voice notes into text and automatically saves them to a self-hosted Memos instance.
 
 ![Python](https://img.shields.io/badge/Python-3.9-blue?style=flat&logo=python)
 ![Docker](https://img.shields.io/badge/Docker-Enabled-blue?style=flat&logo=docker)
 ![GCP](https://img.shields.io/badge/Google_Cloud-Speech_to_Text-red?style=flat&logo=google-cloud)
 ![Memos](https://img.shields.io/badge/Memos-Integration-green?style=flat)
 
-### Este bot está diseñado con una **Arquitectura de Microservicios** modular. Recibe audios, los procesa para cumplir con los estándares de Google (16kHz, 16-bit Mono), los transcribe usando IA y los sincroniza con tu cuenta personal de Memos.
-<p align="center">
-  <img src="public/road.png" width="700" />
-</p>
+#### This bot is designed with a **Microservices Architecture** that is modular. It receives audio files, processes them to comply with Google standards (16kHz, 16-bit Mono), transcribes them using Google Cloud Speech-to-Text, and saves them to a Memos instance.
 
 ---
 
-## Características
+### Features
 
-* **Transcripción IA:** Utiliza Google Cloud Speech-to-Text para una precisión de nivel empresarial.
-* **Procesamiento de Audio:** Conversión automática de OGA (Telegram) a WAV Lineal PCM optimizado.
-* **Privacidad:** Las notas se guardan con visibilidad `PRIVATE` por defecto..
-* **Seguridad:** Restringido por `ALLOWED_USER_ID`. Solo la persona definida en el .env puede.
+* **AI Transcription:** Uses Google Cloud Speech-to-Text for enterprise-level accuracy.
+* **Audio Processing:** Automatic conversion from OGA (Telegram) to optimized Linear PCM WAV.
+* **Privacy:** Notes are saved with `PRIVATE` visibility by default.
+* **Security:** Restricted by `ALLOWED_USER_ID`. Only the person defined in the .env file can use it.
 
 ---
 
-## Estructura
+### Structure
 
 ```text
 voice_bot/
